@@ -1,40 +1,62 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB
+![CF](http://i.imgur.com/7v5ASc8.png) Week 7 Project
 =================================================
 
-## Project Name
+## Full Stack React
 
-### Author: Student/Group Name
+### Author: Katherine Smith
 
 ### Links and Resources
-* [repo](http://xyz.com)
-* [deployed site](http://xyz.com)
+* [Web Server Repository](https://github.com/ksmith10309/full-stack-project-web-server)
+* [React App Repository](https://github.com/ksmith10309/full-stack-project-react-application)
+* [Deployed Web Server](https://full-stack-project-web-server.herokuapp.com/)
+* [Deployed React App](http://full-stack-react-app-deploybucket-vgzw4a262qkw.s3-website-us-west-2.amazonaws.com/)
 
-### Modules
-#### `modulename.js`
-##### Exported Values and Methods
+### React App Modules
+#### `index.js`
+- Imports the App component
+- Renders the App component
 
-###### `foo(thing) -> string`
-Usage Notes or examples
+#### `App.js`
+- Imports the Header component
+- Imports the Page component
+- Contains the App component
+  - Contains state for content and title
+  - Contains componentDidMount method to make superagent request to web server
+  - Renders the Header component and the Page component
+- Exports the App component
 
-###### `bar(array) -> array`
-Usage Notes or examples
+#### `header.js`
+- Contains the Header component
+  - Renders the header
+- Exports the Header component
+
+#### `page.js`
+- Imports the Deck component
+- Contains the Page component
+  - Iterates and renders the Deck component
+- Exports the Page component
+
+#### `deck.js`
+- Imports the Card component
+- Contains the Deck component
+  - Renders the deck header
+  - Iterates and renders the Card component
+- Exports the Deck component
+
+#### `card.js`
+- Contains the Card component
+  - Renders the title, copy, image, and links of the card
+- Exports the Card component
 
 ### Setup
-#### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
-
 #### Running the app
 * `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
+* Displays the React app in the browser at localhost:3000
 
 #### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
+* `npm test`
+* The assertion that each component renders without crashing was made
+* The assertion that the header component, the deck component, and the card component is alive at application start was made
 
 #### UML
-Link to an image of the UML for your application and response to events
+<img src="./full-stack-project.jpg" alt="full-stack-project.jpg" width="700px">
